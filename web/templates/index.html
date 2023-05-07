@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background: #2b727b;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        #dropzone {
+            width: 300px;
+            height: 200px;
+            border: 2px dashed #fff;
+            padding: 10px;
+            text-align: center;
+            line-height: 180px;
+            font-size: 18px;
+            font-weight: 300;
+            cursor: pointer;
+            margin: 0 auto;
+            transition: border 0.2s ease-in-out;
+        }
+
+        #dropzone:hover {
+            border: 2px dashed #ccc;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #fff;
+            color: #2980b9;
+            border: none;
+            padding: 8px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 4px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <title>Entropy Coding</title>
+    <h1>Entropy Coding</h1>
+    <h1>File Drag and Upload</h1>
+    <div id="dropzone">Drag and drop files here</div>
+    <button class="button">Upload File</button>
+    <button class="button" id="download-btn">Download File</button>
+    <script>
+        var dropzone = document.getElementById('dropzone');
+        var downloadBtn = document.getElementById('download-btn');
+        var files = [];
+
+        dropzone.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            dropzone.style.backgroundColor = '#eee';
+        });
+
+        dropzone.addEventListener('dragleave', function(e) {
+            e.preventDefault();
+            dropzone.style.backgroundColor = '#fff';
+        });
+
+        dropzone.addEventListener('drop', function(e) {
+            e.preventDefault();
+            dropzone.style.backgroundColor = '#fff';
+
+            files = e.dataTransfer.files;
+        });
+
+        // Download file when Download button is clicked
+        downloadBtn.addEventListener('click', function() {
+            var fileUrl = '/download?file=' + files[0].name;
+            window.location.href = fileUrl;
+        });
+    </script>
+</body>
+</html>
