@@ -26,7 +26,7 @@ Huffman("input.txt", "output.txt", "output");
 ```c++
 #include"Arithmetic.h"
 
-Arithmetic("input.txt", "arithmetic_output.txt", "arithmetic_output");
+Arithmetic("input.txt", "output.txt", "output");
 ```
 
 
