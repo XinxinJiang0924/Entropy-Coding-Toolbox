@@ -11,7 +11,9 @@ The term "entropy coding" refers to a lossless coding technique that uses coded 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Entropy Coding Toolbox.
 
 ```bash
-//write the code here
+pip install flask
+
+python app.py
 ```
 
 ## Usage
