@@ -30,6 +30,12 @@ Huffman("input.txt", "output.txt", "output");
 
 Arithmetic("input.txt", "output.txt", "output");
 ```
+### CABAC
+Open terminal and type:
+```c++
+src/CABAC/CABAC
+```
+follow the instructions to perfor CABAC.
 
 
 ## Contributing
