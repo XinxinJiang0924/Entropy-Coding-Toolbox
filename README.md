@@ -35,7 +35,7 @@ Open terminal and type:
 ```c++
 src/CABAC/CABAC
 ```
-follow the instructions to perfor CABAC.
+follow the instructions to perform CABAC.
 
 
 ## Contributing
